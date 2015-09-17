@@ -64,11 +64,11 @@ source ~/.bash_profile
 sudo mkdir /root/hadoop-native
 cd /tmp
 sudo yum install -y protobuf-compiler cmake openssl-devel
-wget "http://apache.mirror.anlx.net/hadoop/common/hadoop-2.5.2/hadoop-2.5.2-src.tar.gz"
-tar xvzf hadoop-2.5.2-src.tar.gz
-cd hadoop-2.5.2-src
+wget "http://apache.mirror.anlx.net/hadoop/common/hadoop-2.6.0/hadoop-2.6.0-src.tar.gz"
+tar xvzf hadoop-2.6.0-src.tar.gz
+cd hadoop-2.6.0-src
 mvn package -Pdist,native -DskipTests -Dtar
-sudo mv hadoop-dist/target/hadoop-2.5.2/lib/native/* /root/hadoop-native
+sudo mv hadoop-dist/target/hadoop-2.6.0/lib/native/* /root/hadoop-native
 
 # Install Snappy lib (for Hadoop)
 yum install -y snappy
