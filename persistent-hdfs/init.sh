@@ -29,7 +29,7 @@ case "$HADOOP_MAJOR_VERSION" in
     cp /root/hadoop-native/* /root/persistent-hdfs/lib/native/
     ;;
   yarn)
-    wget http://apache.mirror.anlx.net/hadoop/common/hadoop-2.5.2/hadoop-2.5.2.tar.gz
+    wget http://apache.mirror.anlx.net/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
     echo "Unpacking Hadoop"
     tar xvzf hadoop-*.tar.gz > /tmp/spark-ec2_hadoop.log
     rm hadoop-*.tar.gz
