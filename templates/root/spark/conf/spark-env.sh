@@ -15,6 +15,7 @@ export MASTER=`cat /root/spark-ec2/cluster-url`
 
 export SPARK_SUBMIT_LIBRARY_PATH="$SPARK_SUBMIT_LIBRARY_PATH:/root/ephemeral-hdfs/lib/native/"
 export SPARK_SUBMIT_CLASSPATH="$SPARK_CLASSPATH:$SPARK_SUBMIT_CLASSPATH:/root/ephemeral-hdfs/conf"
+export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath):$HADOOP_HOME/share/hadoop/tools/lib/*
 
 # Bind Spark's web UIs to this machine's public EC2 hostname otherwise fallback to private IP:
 export SPARK_PUBLIC_DNS=`
